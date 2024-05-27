@@ -1,4 +1,5 @@
-﻿using ShopV1.Data.Configurations;
+﻿using ShopV1.Data.Extensions;
+using ShopV1.Data.Configurations;
 using ShopV1.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,7 +15,7 @@ namespace ShopV1.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            //Configure using Fluent API
             modelBuilder.ApplyConfiguration(new CartConfiguration());
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
@@ -30,6 +31,8 @@ namespace ShopV1.Data.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
 
+            //Data seeding
+            modelBuilder.Seed();
             //base.OnModelCreating(modelBuilder);
         }
 
