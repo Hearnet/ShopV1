@@ -21,5 +21,7 @@ namespace ShopV1.Data.Entities
         public List<Cart> Carts { get; set; }
 
         public List<ProductTranslation> ProductTranslations { get; set; }
+
+        public List<ProductImage> ProductImages { get; set; }
     }
 }
