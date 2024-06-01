@@ -1,6 +1,7 @@
-﻿using ShopV1.Application.Catalog.Products.Dtos;
-using ShopV1.Application.Catalog.Products.Dtos.Manage;
-using ShopV1.Application.Dtos;
+﻿using ShopV1.ViewModels.Catalog.Products;
+using ShopV1.ViewModels.Common;
+using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ShopV1.Application.Catalog.Products
@@ -20,6 +21,14 @@ namespace ShopV1.Application.Catalog.Products
         Task AddViewcount(int productId);
 
 
-        Task<PagedResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
+        Task<PagedResult<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
+
+        Task<int> AddImages(int productId, List<IFormFile> files);
+
+        Task<int> RemoveImages(int imageId);
+
+        Task<int> UpdateImage(int imageId, string caption, bool isDefault);
+
+        Task<List<ProductImageViewModel>> GetListImage(int productId);
     }
 }

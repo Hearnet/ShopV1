@@ -1,16 +1,15 @@
-﻿using ShopV1.Application.Catalog.Products.Dtos;
-using ShopV1.Application.Catalog.Products.Dtos.Public;
-using ShopV1.Application.Dtos;
-using System;
+﻿using ShopV1.ViewModels.Catalog.Products;
+using ShopV1.ViewModels.Common;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ShopV1.Application.Catalog.Products
 {
     public interface IPublicProductService
     {
-        Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request);
+        Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetPublicProductPagingRequest request);
+
+        Task<List<ProductViewModel>> GetAll();
     }
 }
  

@@ -1,11 +1,11 @@
-﻿using ShopV1.Application.Dtos;
+﻿using ShopV1.ViewModels.Common;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ShopV1.Application.Catalog.Products.Dtos.Manage
+namespace ShopV1.ViewModels.Catalog.Products
 {
-    public class GetProductPagingRequest : PagingRequestBase
+    public class GetManageProductPagingRequest : PagingRequestBase
     {
         public string Keyword { get; set; }
 
