@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ShopV1.Application.Catalog.Products;
+using ShopV1.Application.Common;
 using ShopV1.Data.EF;
 using ShopV1.Utilities.Constants;
 using Microsoft.AspNetCore.Builder;
@@ -32,7 +33,11 @@ namespace ShopV1.BackendApi
                 options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
 
             //Declare DI
+            services.AddTransient<IStorageService, FileStorageService>();
+
             services.AddTransient<IPublicProductService, PublicProductService>();
+
+            services.AddTransient<IManageProductService, ManageProductService>();
 
             services.AddControllersWithViews();
 

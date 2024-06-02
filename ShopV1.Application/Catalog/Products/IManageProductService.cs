@@ -1,4 +1,5 @@
 ﻿using ShopV1.ViewModels.Catalog.Products;
+using ShopV1.ViewModels.Catalog.ProductImages;
 using ShopV1.ViewModels.Common;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ namespace ShopV1.Application.Catalog.Products
 {
     public interface IManageProductService
     {
+        Task<ProductViewModel> GetById(int productId, string languageId);
+
         Task<int> Create(ProductCreateRequest request);
 
         Task<int> Update(ProductUpdateRequest request);
@@ -23,12 +26,14 @@ namespace ShopV1.Application.Catalog.Products
 
         Task<PagedResult<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
 
-        Task<int> AddImages(int productId, List<IFormFile> files);
+        Task<int> AddImage(int productId, ProductImageCreateRequest request);
 
-        Task<int> RemoveImages(int imageId);
+        Task<int> RemoveImage(int imageId);
 
-        Task<int> UpdateImage(int imageId, string caption, bool isDefault);
+        Task<int> UpdateImage(int imageId, ProductImageUpdateRequest request);
 
-        Task<List<ProductImageViewModel>> GetListImage(int productId);
+        Task<ProductImageViewModel> GetImageById(int imageId);
+
+        Task<List<ProductImageViewModel>> GetListImages(int productId);
     }
 }
