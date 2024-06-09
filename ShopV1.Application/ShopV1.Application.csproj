@@ -9,6 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.1.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ShopV1.Data\ShopV1.Data.csproj" />
     <ProjectReference Include="..\ShopV1.Utilities\ShopV1.Utilities.csproj" />
     <ProjectReference Include="..\ShopV1.ViewModels\ShopV1.ViewModels.csproj" />
