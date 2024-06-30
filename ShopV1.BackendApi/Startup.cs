@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using ShopV1.Application.Catalog.Products;
 using ShopV1.Application.Common;
+using ShopV1.Application.System.Languages;
 using ShopV1.Application.System.Users;
 using ShopV1.Application.System.Roles;
 using ShopV1.Data.EF;
@@ -49,8 +50,9 @@ namespace ShopV1.BackendApi
             services.AddTransient<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
             services.AddTransient<RoleManager<AppRole>, RoleManager<AppRole>>();
-            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ILanguageService, LanguageService>();
             services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IUserService, UserService>();
 
             //services.AddTransient<IValidator<LoginRequest>, LoginRequestValidator>();
             //services.AddTransient<IValidator<RegisterRequest>, RegisterRequestValidator>();

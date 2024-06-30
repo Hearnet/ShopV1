@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using ShopV1.AdminApp.Services;
+using ShopV1.Utilities.Constants;
 using ShopV1.ViewModels.System.Users;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -56,7 +57,8 @@ namespace ShopV1.AdminApp.Controllers
                 ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
                 IsPersistent = false
             };
-            HttpContext.Session.SetString("Token", result.ResultObj);
+            HttpContext.Session.SetString(SystemConstants.AppSettings.DefaultLanguageId, _configuration[SystemConstants.AppSettings.DefaultLanguageId]);
+            HttpContext.Session.SetString(SystemConstants.AppSettings.Token, result.ResultObj);
             await HttpContext.SignInAsync(
                         CookieAuthenticationDefaults.AuthenticationScheme,
                         userPrincipal,
