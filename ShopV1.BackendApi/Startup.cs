@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ShopV1.Application.Catalog.Categories;
 using ShopV1.Application.Catalog.Products;
 using ShopV1.Application.Common;
 using ShopV1.Application.System.Languages;
@@ -46,6 +47,7 @@ namespace ShopV1.BackendApi
             services.AddTransient<IStorageService, FileStorageService>();
 
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<ICategoryService, CategoryService>();
 
             services.AddTransient<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
