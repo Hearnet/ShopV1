@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using ShopV1.AdminApp.Services;
+using ShopV1.ApiIntegration;
 using ShopV1.Utilities.Constants;
 using ShopV1.ViewModels.Catalog.Products;
 using ShopV1.ViewModels.Common;

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ShopV1.AdminApp.Services
+namespace ShopV1.ApiIntegration
 {
     public interface ILanguageApiClient
     {

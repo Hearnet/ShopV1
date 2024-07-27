@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 
-namespace ShopV1.AdminApp.Services
+namespace ShopV1.ApiIntegration
 {
     public class UserApiClient : IUserApiClient
     {

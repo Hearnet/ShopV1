@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ShopV1.ApiIntegration\ShopV1.ApiIntegration.csproj" />
     <ProjectReference Include="..\ShopV1.Utilities\ShopV1.Utilities.csproj" />
     <ProjectReference Include="..\ShopV1.ViewModels\ShopV1.ViewModels.csproj" />
   </ItemGroup>

@@ -1,5 +1,5 @@
 ﻿using ShopV1.AdminApp.Models;
-using ShopV1.AdminApp.Services;
+using ShopV1.ApiIntegration;
 using ShopV1.Utilities.Constants;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

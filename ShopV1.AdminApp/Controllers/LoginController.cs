@@ -5,7 +5,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using ShopV1.AdminApp.Services;
+using ShopV1.ApiIntegration;
 using ShopV1.Utilities.Constants;
 using ShopV1.ViewModels.System.Users;
 using Microsoft.AspNetCore.Authentication;

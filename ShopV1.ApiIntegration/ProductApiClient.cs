@@ -13,7 +13,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShopV1.AdminApp.Services
+namespace ShopV1.ApiIntegration
 {
     public class ProductApiClient : BaseApiClient, IProductApiClient
     {
