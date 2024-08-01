@@ -4,6 +4,7 @@ using ShopV1.Application.Catalog.Products;
 using ShopV1.Application.Common;
 using ShopV1.Application.System.Languages;
 using ShopV1.Application.System.Users;
+using ShopV1.Application.Utilities.Slides;
 using ShopV1.Application.System.Roles;
 using ShopV1.Data.EF;
 using ShopV1.Data.Entities;
@@ -53,6 +54,7 @@ namespace ShopV1.BackendApi
             services.AddTransient<SignInManager<AppUser>, SignInManager<AppUser>>();
             services.AddTransient<RoleManager<AppRole>, RoleManager<AppRole>>();
             services.AddTransient<ILanguageService, LanguageService>();
+            services.AddTransient<ISlideService, SlideService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IUserService, UserService>();
 
