@@ -7,6 +7,7 @@ namespace ShopV1.Utilities.Constants
     public class SystemConstants
     {
         public const string MainConnectionString = "ShopV1Db";
+        public const string CartSession = "CartSession";
 
         public class AppSettings
         {
