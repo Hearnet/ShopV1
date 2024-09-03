@@ -1,12 +1,4 @@
-﻿{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:59559",
-      "sslPort": 44337
-    }
-  },
+{
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
@@ -18,10 +10,18 @@
     "ShopV1.AdminApp": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:5002",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:5002"
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:57496/",
+      "sslPort": 44328
     }
   }
 }
